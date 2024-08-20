@@ -97,6 +97,7 @@ function OpenIdConnectRoutes({ oidc, routerBasename, userAuthenticationService }
   const userManager = initUserManager(oidc, routerBasename);
 
   const getAuthorizationHeader = () => {
+    console.log('thiiiis shitt1');
     const user = userAuthenticationService.getUser();
 
     // if the user is null return early, next time
@@ -137,6 +138,7 @@ function OpenIdConnectRoutes({ oidc, routerBasename, userAuthenticationService }
   }, []);
 
   useEffect(() => {
+    console.log('thiiiis shitt2');
     userAuthenticationService.set({ enabled: true });
 
     userAuthenticationService.setServiceImplementation({

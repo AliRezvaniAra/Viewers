@@ -15,6 +15,7 @@ export function updateAuthServiceAndCleanUrl(
 
   // if a token is passed in, set the userAuthenticationService to use it
   // for the Authorization header for all requests
+  console.log('thiiiis shitt4');
   userAuthenticationService.setServiceImplementation({
     getAuthorizationHeader: () => ({
       Authorization: 'Bearer ' + token,
